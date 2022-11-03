@@ -9,7 +9,7 @@ API website.
 ```bash
 export GO_LOTR_API=<your api key>
 
-go get github.com/carlosdamazio/carlosdamazio-SDK
+go get github.com/carlosdamazio/carlosdamazio_SDK@v1.0.0
 ```
 
 ```go
