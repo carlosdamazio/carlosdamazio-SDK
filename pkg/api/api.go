@@ -4,12 +4,12 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/carlosdamazio/lotrsdk/internal/models"
-	"github.com/carlosdamazio/lotrsdk/internal/service/book"
-	"github.com/carlosdamazio/lotrsdk/internal/service/chapter"
-	"github.com/carlosdamazio/lotrsdk/internal/service/character"
-	"github.com/carlosdamazio/lotrsdk/internal/service/movie"
-	"github.com/carlosdamazio/lotrsdk/internal/service/quote"
+	"github.com/carlosdamazio/carlosdamazio_SDK/internal/models"
+	"github.com/carlosdamazio/carlosdamazio_SDK/internal/service/book"
+	"github.com/carlosdamazio/carlosdamazio_SDK/internal/service/chapter"
+	"github.com/carlosdamazio/carlosdamazio_SDK/internal/service/character"
+	"github.com/carlosdamazio/carlosdamazio_SDK/internal/service/movie"
+	"github.com/carlosdamazio/carlosdamazio_SDK/internal/service/quote"
 )
 
 type (
@@ -51,11 +51,11 @@ func New() *Requester {
 	authHeader := os.Getenv("GO_LOTR_API")
 	client := &http.Client{}
 	return &Requester{
-		Book: book.New().WithHTTPClient(client),
-		Movie: movie.New().WithHTTPClient(client).WithAuthorizationHeader(authHeader),
+		Book:      book.New().WithHTTPClient(client),
+		Movie:     movie.New().WithHTTPClient(client).WithAuthorizationHeader(authHeader),
 		Character: character.New().WithHTTPClient(client).WithAuthorizationHeader(authHeader),
-		Quote: quote.New().WithHTTPClient(client).WithAuthorizationHeader(authHeader),
-		Chapter: chapter.New().WithHTTPClient(client).WithAuthorizationHeader(authHeader),
+		Quote:     quote.New().WithHTTPClient(client).WithAuthorizationHeader(authHeader),
+		Chapter:   chapter.New().WithHTTPClient(client).WithAuthorizationHeader(authHeader),
 	}
 }
 

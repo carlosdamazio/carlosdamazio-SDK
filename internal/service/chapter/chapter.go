@@ -3,8 +3,8 @@ package chapter
 import (
 	"net/http"
 
-	"github.com/carlosdamazio/lotrsdk/internal/models"
-	"github.com/carlosdamazio/lotrsdk/internal/service"
+	"github.com/carlosdamazio/carlosdamazio_SDK/internal/models"
+	"github.com/carlosdamazio/carlosdamazio_SDK/internal/service"
 )
 
 type (
@@ -46,5 +46,3 @@ func (s *Service) GetByID(id string) (*models.Chapter, error) {
 
 	return any(res).([]*models.Chapter)[0], nil
 }
-
-

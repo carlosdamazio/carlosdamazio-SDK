@@ -3,11 +3,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/carlosdamazio/lotrsdk/pkg/api"
+	"github.com/carlosdamazio/carlosdamazio_SDK/pkg/api"
 )
 
 func main() {
-	client := api.New("SDzi1-GkN2i4hUA9R7Iy")
+	client := api.New()
 
 	characters, err := client.Character.List()
 	if err != nil {
@@ -30,4 +30,3 @@ func main() {
 		fmt.Printf("ID: %s, Name: %s\n", quote.ID, quote.Dialog)
 	}
 }
-       

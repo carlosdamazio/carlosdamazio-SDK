@@ -6,7 +6,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/carlosdamazio/lotrsdk/internal/models"
+	"github.com/carlosdamazio/carlosdamazio_SDK/internal/models"
 )
 
 type ListDocs[T any] struct {
