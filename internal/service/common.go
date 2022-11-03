@@ -34,6 +34,10 @@ func List[T models.Book |
 	resp, err := client.Do(req)
 	defer resp.Body.Close()
 
+	if resp.StatusCode != 200 {
+		return nil, fmt.Errorf("failed request with status: %d", resp.StatusCode)
+	}
+
 	bodyBytes, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err
