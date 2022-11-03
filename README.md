@@ -18,7 +18,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/carlosdamazio/lotrsdk/pkg/api"
+	"github.com/carlosdamazio/carlosdamazio-SDK/pkg/api"
 )
 
 func main() {
