@@ -18,7 +18,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/carlosdamazio/carlosdamazio-SDK/pkg/api"
+	"github.com/carlosdamazio/carlosdamazio_SDK/pkg/api"
 )
 
 func main() {
